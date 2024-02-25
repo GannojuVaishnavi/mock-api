@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <!-- https://65202691906e276284c41a7a.mockapi.io/api/users/users -->
+
+<head>
+  <title>
+    Mock API
+  </title>
+  <link rel="stylesheet" type="text/css" href="./css.css">
+  <script src="https://kit.fontawesome.com/28ec243a89.js" crossorigin="anonymous"></script>
+
+
+<body>
+  <header>
+    <p> Mock API </p>
+    <div id="grow">
+      <input type="text" id="searchBar" placeholder="Enter name to search.."><i class="fa-solid fa-magnifying-glass"id="searchIcon"></i>
+    </div>
+
+    <button id="bino" type="button"><i class="fa-solid fa-binoculars"></i></button>
+    <button id="addUser" type="button" ><i class="fa-solid fa-user-plus"></i></button>
+
+    <div class="modal fade show" id="modalAddUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+      style="display: none;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <form id="addUserForm">
+              <input type="text" id="inputName" placeholder="Name">
+              <input type="number" id="inputAge" placeholder="Age" max="100" min="0">
+              <select id="inputState">
+                <option disabled="" selected="">State</option>
+                <option>Andaman and Nicobar Islands</option>
+                <option>Andhra Pradesh</option>
+                <option>Arunachal Pradesh</option>
+                <option>Assam</option>
+                <option>Bihar</option>
+                <option>Chandigarh</option>
+                <option>Chhattisgarh</option>
+                <option>Dadra and Nagar Haveli and Daman &amp; Diu</option>
+                <option>Delhi</option>
+                <option>Goa</option>
+                <option>Gujarat</option>
+                <option>Haryana</option>
+                <option>Himachal Pradesh</option>
+                <option>Jammu &amp; Kashimr</option>
+                <option>Jharkand</option>
+                <option>Karnataka</option>
+                <option>Kerala</option>
+                <option>Ladakh</option>
+                <option>Lakshadweep</option>
+                <option>Madhya Pradesh</option>
+                <option>Maharashtra</option>
+                <option>Manipur</option>
+                <option>Meghalaya</option>
+                <option>Mizoram</option>
+                <option>Nagaland</option>
+                <option>Odisha</option>
+                <option>Puducherry</option>
+                <option>Punjab</option>
+                <option>Rajasthan</option>
+                <option>Sikkim</option>
+                <option>Tamil Nadu</option>
+                <option>Telanagana</option>
+                <option>Tripura</option>
+                <option>Uttar Pradesh</option>
+                <option>Uttarakhand</option>
+                <option>West Bengal</option>
+              </select>
+              <button type="button" class="btn btn-primary" id="addUserButton" >Add User</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <table id="table">
+      <thead>
+      <tr id="tableHeadings">
+        <th class="name">Name</th>
+        <th class="age">Age</th>
+        <th class="state">State</th>
+        <th class="functions">Functions</th>
+      </tr>
+      </thead>
+      <tbody id="userList">
+      </tbody>
+    </table>
+  </main>
+
+
+  <div class="modal" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="false">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <h5 class="modal-title" id="exampleModalLabel">Confirm the User</h5> -->
+          <!-- <button type="button" class="close deleteCancel" data-bs-dismiss="modal" aria-label="Close"> -->
+            <!-- <span aria-hidden="true">×</span> -->
+          <!-- </button> -->
+        </div>
+        <div class="delbox">
+        <div class="modal-body" >
+          <h5><b>Deleting: <span id="userDeleted"></span></b></h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger confirmDelete"  data-bs-dismiss="modal">Delete</button>
+          <button type="button" class="btn btn-secondary deleteCancel" valuedata-bs-dismiss="modal">Cancel</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./lib/bootstrap.bundle.min.js"></script>
+  <script src="./js.js"></script>
+
+
+  </body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+</html>
